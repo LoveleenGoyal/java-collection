@@ -20,7 +20,6 @@ public class ReverseList {
 
         System.out.println("Original LinkedList: " + linkedList);
         System.out.println("Reversed LinkedList: " + reverseLinkedList(linkedList));
-
     }
 
     // Method to reverse elements using arraylist
