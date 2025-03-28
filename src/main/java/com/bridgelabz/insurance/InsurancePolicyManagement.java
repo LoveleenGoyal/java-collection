@@ -19,7 +19,7 @@ public class InsurancePolicyManagement {
     }
 
     public void displayExpiringPolicies(Date currentDate) {
-        System.out.println("Policies Expiring Soon:");
+        System.out.println("\nPolicies Expiring Soon:");
         for (InsurancePolicy policy : treeSet) {
             if (policy.getExpiryDate().getTime() - currentDate.getTime() <= 30L * 24 * 60 * 60 * 1000) {
                 System.out.println(policy);
@@ -28,7 +28,7 @@ public class InsurancePolicyManagement {
     }
 
     public void displayPoliciesByCoverageType(String coverageType) {
-        System.out.println("Policies with Coverage Type: " + coverageType);
+        System.out.println("\nPolicies with Coverage Type: " + coverageType);
         for (InsurancePolicy policy : hashSet) {
             if (policy.getCoverageType().equalsIgnoreCase(coverageType)) {
                 System.out.println(policy);
@@ -37,7 +37,7 @@ public class InsurancePolicyManagement {
     }
 
     public void findDuplicatePolicies() {
-        System.out.println("Duplicate Policies:");
+        System.out.println("\nDuplicate Policies:");
         Set<String> seen = new HashSet<>();
         for (InsurancePolicy policy : hashSet) {
             if (!seen.add(policy.getPolicyNumber())) {
@@ -51,13 +51,16 @@ public class InsurancePolicyManagement {
         Calendar cal = Calendar.getInstance();
 
         cal.set(2025, Calendar.JUNE, 15);
-        system.addPolicy(new InsurancePolicy("P1001", "Alice", cal.getTime(), "Health", 5000));
+        system.addPolicy(new InsurancePolicy("P1001", "Loveleen", cal.getTime(), "Health", 5000));
 
         cal.set(2025, Calendar.APRIL, 10);
-        system.addPolicy(new InsurancePolicy("P1002", "Bob", cal.getTime(), "Auto", 3000));
+        system.addPolicy(new InsurancePolicy("P1002", "Love", cal.getTime(), "Auto", 3000));
 
         cal.set(2025, Calendar.MAY, 5);
-        system.addPolicy(new InsurancePolicy("P1003", "Charlie", cal.getTime(), "Home", 7000));
+        system.addPolicy(new InsurancePolicy("P1003", "Yagyata", cal.getTime(), "Home", 7000));
+
+        cal.set(2025, Calendar.APRIL, 10);
+        system.addPolicy(new InsurancePolicy("P1004", "Ria", cal.getTime(), "Auto", 3000));
 
         system.displayAllPolicies();
         system.displayExpiringPolicies(new Date());
