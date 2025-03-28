@@ -24,8 +24,8 @@ public class ReverseList {
     }
 
     // Method to reverse elements using arraylist
-    public static <T> List<T> reverseArrayList(List<T> list) {
-        List<T> reversedList = new ArrayList<>();
+    public static  List<Integer> reverseArrayList(List<Integer> list) {
+        List<Integer> reversedList = new ArrayList<>();
         for (int i = list.size() - 1; i >= 0; i--) {
             reversedList.add(list.get(i));
         }
@@ -33,9 +33,9 @@ public class ReverseList {
     }
 
     // Method to reverse elements using linked-list
-    public static <T> List<T> reverseLinkedList(List<T> list) {
-        LinkedList<T> reversedList = new LinkedList<>();
-        for (T item : list) {
+    public static  List<Integer> reverseLinkedList(List<Integer> list) {
+        LinkedList<Integer> reversedList = new LinkedList<>();
+        for (Integer item : list) {
             reversedList.addFirst(item);
         }
         return reversedList;
