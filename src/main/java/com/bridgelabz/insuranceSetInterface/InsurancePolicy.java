@@ -1,4 +1,4 @@
-package com.bridgelabz.insurance;
+package com.bridgelabz.insuranceSetInterface;
 
 import java.util.Date;
 import java.util.Objects;
